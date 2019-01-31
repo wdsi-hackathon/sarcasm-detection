@@ -13,6 +13,11 @@ CSS
 
 using url 
 
+# installation 
+
+npm install react-chartjs-2 chart.js --save
+
+
 # Authors and acknowledgmen
 
 for the data 
