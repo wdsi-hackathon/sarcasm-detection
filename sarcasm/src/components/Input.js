@@ -27,9 +27,15 @@ handleSend(){
 
   render() {
     return (
-      <div className="App">
-      <label>write your subject</label><input type="text" name="value" onChange={this.handleChange.bind(this)}/>
-      <button onClick={() => this.handleSend()}>send</button>
+      <div className="contaienr">
+      
+            <div class="search"></div>
+
+      <input class="search" type="text" placeholder="Search..." name="value" onChange={this.handleChange.bind(this)}/>
+      
+    
+
+      <button className="btn" onClick={() => this.handleSend()}>send</button>
       </div>
     );
   }
