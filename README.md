@@ -8,6 +8,9 @@ Python
 Javscript
 html
 CSS
+# visual 
+https://www.figma.com/file/BY4R0nTaiLgwax7s5Doljdup/Untitled?node-id=0%3A1
+
 
 # Roadmap
 
