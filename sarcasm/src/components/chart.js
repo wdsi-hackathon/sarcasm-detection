@@ -1,45 +1,31 @@
 import React from 'react';
 import { Pie } from 'react-chartjs-2';
 
-
-
-const result = (props) => {
-    console.log(props)
-    const firstObject = {
-        criminal: props.dashboardLowyers ? props.dashboardLowyers.criminal : '',
-        legalrights: props.dashboardLowyers ? props.dashboardLowyers.legalrights : '',
-        familystatus: props.dashboardLowyers ? props.dashboardLowyers.familystatus : '',
-        commercial: props.dashboardLowyers ? props.dashboardLowyers.commercial : '',
-        labour: props.dashboardLowyers ? props.dashboardLowyers.labour : '',
-    }
-    let label = Object.keys(firstObject)
-    let num = Object.values(firstObject)
-
+const Chart = (props) => {
+    let label = ['Not-Sarcastic', 'Sarcastic']
+    // console.log(props.dashboard)
     const data = {
         labels:
             label
         ,
         datasets: [{
-            data: num,
+            data: [props.probability_0, props.probability_1],
             backgroundColor: [
-                '#a99c8b',
-                '#a3b8a2'
+                '#ffffff',
+                'crimson'
             ],
             hoverBackgroundColor: [
-                '#84796a',
-                '#879986'
+                '#9c9898',
+                'rgb(197, 83, 106)'
             ]
         }]
     };
-
-    return (<div>
-            <h2>The Result</h2>
-            <div>
-                <Pie data={data} />
-            </div>
-
-</div>
-  
+    return (
+        <div>
+            
+            <Pie data={data} />
+        </div>
     );
 }
-export default result;
+
+export default Chart;
